@@ -1,8 +1,6 @@
 from Plugins.Plugin import PluginDescriptor
 from Screens.Screen import Screen
-from Screens.MessageBox import MessageBox
 from Components.MenuList import MenuList
-from Components.Label import Label
 from Components.ActionMap import ActionMap
 from Components.Sources.StaticText import StaticText
 from Screens.VirtualKeyBoard import VirtualKeyBoard
@@ -112,9 +110,8 @@ class LiveStreamingLinks(Screen):
 			self.session.openWithCallback(self.urlTypeCallback, LiveStreamingLinksHeader)
 
 	def urlTypeCallback(self, res):
-		if res:
-			if res != 'cancel':
-				self.session.openWithCallback(self.urlCallback, VirtualKeyBoard, title=_("Enter URL"), text=res)
+		if res and res != 'cancel':
+			self.session.openWithCallback(self.urlCallback, VirtualKeyBoard, title=_("Enter URL"), text=res)
 
 	def urlCallback(self, res):
 		if res:
@@ -142,9 +139,8 @@ class LiveStreamingLinks(Screen):
 		try:
 			lines = open(name).readlines()
 			return lines
-		except:
+		except Exception:
 			return ''
-			pass
 
 
 def main(session, **kwargs):
