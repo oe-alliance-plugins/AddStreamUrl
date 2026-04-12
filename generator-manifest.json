@@ -1,0 +1,24 @@
+{
+  "depends": "",
+  "description": "Add a stream url to channel list",
+  "legacy_setup": {
+    "description": "Add a stream url to channel list",
+    "has_setup_translate": false,
+    "name": "enigma2-plugin-extensions-addstreamurl",
+    "package_data": [],
+    "package_dir_value": "",
+    "packages": [],
+    "pkg": "Extensions.AddStreamUrl",
+    "version": "1.0"
+  },
+  "module_dir_name": "AddStreamUrl",
+  "package_name": "enigma2-plugin-extensions-addstreamurl",
+  "plugin_group": "extensions",
+  "source_repo_branch": "python3",
+  "source_repo_name": "e2openplugin-AddStreamUrl",
+  "source_repo_url": "https://github.com/E2OpenPlugins/e2openplugin-AddStreamUrl.git",
+  "target_repo_branch": "main",
+  "target_repo_name": "AddStreamUrl",
+  "target_repo_url": "git@github.com:oe-alliance-plugins/AddStreamUrl.git",
+  "version": "1.0"
+}
